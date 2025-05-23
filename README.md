@@ -51,15 +51,15 @@ This project showcases a range of data analysis and machine learning skills, inc
 1.  **NHS Prescription Cost Analysis (PCA) Data (England, 2019-2024):**
     * **Source:** NHS Business Services Authority (NHSBSA) Open Data Portal.
     * **Description:** Aggregated data on prescription items dispensed in England, detailing costs and volumes.
-    * **Link (Example):** [NHSBSA PCA Data](https://www.nhsbsa.nhs.uk/prescription-data/dispensing-data/prescription-cost-analysis-pca-data)
+    * **Link (Example):** [NHSBSA PCA Data](https://opendata.nhsbsa.net/dataset/prescription-cost-analysis-pca-annual-statistics)
 2.  **MeCareNWL – Psychosocial and Occupational Impact of COVID-19 among NHS Staff (January 2021):**
     * **Source:** Zenodo / F1000Research.
     * **Description:** Survey data from >1000 NHS staff in NW London (demographics, occupational factors, psychosocial factors, mental health scale scores).
-    * **Link:** [Zenodo Dataset](https://doi.org/10.5281/zenodo.8112940) | [F1000Research Article](https://f1000research.com/articles/13-61)
-3.  **ICB Shapefile (England, e.g., 2023):**
+    * **Link:** [Zenodo Dataset](10.5281/zenodo.7352557) | [F1000Research Article](https://zenodo.org/records/8112940)
+3.  **ICB Shapefile:**
     * **Source:** ONS Geography Portal.
     * **Description:** Geospatial data for Integrated Care Board boundaries.
-4.  **ICB Population Data (England, e.g., 2023):**
+4.  **ICB Population Data (England):**
     * **Source:** Manually transcribed from a table image (original source ONS).
     * **Description:** Population figures for ICBs, used for normalizing prescribing rates.
 
@@ -69,7 +69,7 @@ The project followed an iterative data analysis workflow:
 
 1.  **Data Acquisition & Initial Understanding:** Sourcing datasets and familiarizing with their structure, content, and documentation.
 2.  **Data Cleaning & Preparation (Python - Pandas, NumPy):**
-    * **PCA Data:** Involved combining multiple annual files, extensive string standardization for geographical names (ICB/STP transitions to ensure consistency for mapping with shapefiles and population data), filtering for antidepressant medications (BNF Chapter 4, Section 3), data type conversions, and handling missing values (e.g., for `SUPPLIER_NAME`). The meaning of `PREP_CLASS` codes was researched and applied for branded/generic analysis.
+    * **PCA Data:** Involved combining multiple annual files, extensive string standardization for geographical names (ICB/STP transitions to ensure consistency for mapping with shapefiles and population data) using RegEx, filtering for antidepressant medications (BNF Chapter 4, Section 3), data type conversions, and handling missing values (e.g., for `SUPPLIER_NAME`). The meaning of `PREP_CLASS` codes was researched and applied for branded/generic analysis.
     * **MeCare Data:** This involved an initial reduction from ~194 raw survey columns to ~55 relevant features. Q-number column headers were renamed to meaningful variable names. A systematic process of data type conversion (object to numeric/category, mapping ordinal/binary scales with attention to scoring direction) was undertaken. Missing values were handled strategically: rows with missing target variables were dropped, highly sparse columns were removed, specific contextual features had missingness flagged with a special value (-1), and remaining missing feature data was imputed using median or mode.
 3.  **Exploratory Data Analysis (Tableau & Python):**
     * **PCA Data (Tableau):** Focused on visualizing national prescribing trends (total items, NIC, average NIC/item over 2019-2024), geographical variations (items/1000 population, avg NIC/item by ICB on interactive maps), breakdowns by antidepressant class, identification of top prescribed chemicals, and analysis of branded vs. generic prescribing patterns and costs.
