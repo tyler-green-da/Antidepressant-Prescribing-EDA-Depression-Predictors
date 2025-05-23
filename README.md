@@ -51,14 +51,15 @@ This project showcases a range of data analysis and machine learning skills, inc
 1.  **NHS Prescription Cost Analysis (PCA) Data (England, 2019-2024):**
     * **Source:** NHS Business Services Authority (NHSBSA) Open Data Portal.
     * **Description:** Aggregated data on prescription items dispensed in England, detailing costs and volumes.
-    * **Link (Example):** [NHSBSA PCA Data](https://opendata.nhsbsa.net/dataset/prescription-cost-analysis-pca-annual-statistics)
+    * **Link:** [NHSBSA PCA Data](https://opendata.nhsbsa.net/dataset/prescription-cost-analysis-pca-annual-statistics)
 2.  **MeCareNWL – Psychosocial and Occupational Impact of COVID-19 among NHS Staff (January 2021):**
     * **Source:** Zenodo / F1000Research.
     * **Description:** Survey data from >1000 NHS staff in NW London (demographics, occupational factors, psychosocial factors, mental health scale scores).
-    * **Link:** [Zenodo Dataset](10.5281/zenodo.7352557) | [F1000Research Article](https://zenodo.org/records/8112940)
+    * **Link:** [Zenodo Dataset](https://zenodo.org/records/8112940)
 3.  **ICB Shapefile:**
     * **Source:** ONS Geography Portal.
     * **Description:** Geospatial data for Integrated Care Board boundaries.
+    * **Link:** [ICB Shapefiles](https://geoportal.statistics.gov.uk/search?q=BDY_ICB&sort=Date%20Created%7Ccreated%7Cdesc)
 4.  **ICB Population Data (England):**
     * **Source:** Manually transcribed from a table image (original source ONS).
     * **Description:** Population figures for ICBs, used for normalizing prescribing rates.
